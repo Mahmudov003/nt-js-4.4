@@ -33,6 +33,9 @@ function added(fill){
     studentsTbody.innerHTML = ""
     fill.forEach(function (student, index) {
         const nameTr = document.createElement('tr');
+        nameTr.addEventListener('click', (e) => {
+            alert(student.name + " "+ student.group +" " + student.success)
+        })
 
         const orderTh = document.createElement('th')
         orderTh.setAttribute('scope', 'row')
